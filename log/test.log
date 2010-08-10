@@ -1,0 +1,278 @@
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@primedia.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@primedia.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('74c14c37f50a41727827f966479c7a3bde8ec901', '2010-08-10 16:39:26', '2010-08-10 16:39:26', NULL, '2010-08-10 16:39:26', NULL, 0, 'nAunxCNYXiU1eDUSJC_S', NULL, NULL, NULL, 'xJgxpS9Vp4xA_onRX8P7', NULL, NULL, 'user@primedia.com', NULL)[0m
+Sent mail to user@primedia.com
+
+Date: Tue, 10 Aug 2010 12:39:26 -0400
+From: pechakucha@primedia.com
+To: user@primedia.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@primedia.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=xJgxpS9Vp4xA_onRX8P7">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@primedia.com') LIMIT 1[0m
+  [4;35;1mUser Create (106.5ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('ea10e3539664d5c884372056aec21261c96c831b', '2010-08-10 16:41:52', '2010-08-10 16:41:52', NULL, '2010-08-10 16:41:52', NULL, 0, '7E9g0dOB7odZHJMU7cms', NULL, NULL, NULL, 'BJQhGV00h1Rpq67JbGQa', NULL, NULL, 'user@primedia.com', NULL)[0m
+Sent mail to user@primedia.com
+
+Date: Tue, 10 Aug 2010 12:41:52 -0400
+From: pechakucha@primedia.com
+To: user@primedia.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@primedia.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=BJQhGV00h1Rpq67JbGQa">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@apartmentguide.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('2befba3d4593deb623af01944b34cc5e87cc7981', '2010-08-10 16:41:52', '2010-08-10 16:41:52', NULL, '2010-08-10 16:41:52', NULL, 0, '71vSRRBuY8ytRcH8cF-a', NULL, NULL, NULL, 'g9HKNNZ1t9s_-gNvMxGw', NULL, NULL, 'user@apartmentguide.com', NULL)[0m
+Sent mail to user@apartmentguide.com
+
+Date: Tue, 10 Aug 2010 12:41:52 -0400
+From: pechakucha@primedia.com
+To: user@apartmentguide.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@apartmentguide.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=g9HKNNZ1t9s_-gNvMxGw">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@rentals.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('715a238de98219dd49233411694fec9bf3b20059', '2010-08-10 16:41:52', '2010-08-10 16:41:52', NULL, '2010-08-10 16:41:52', NULL, 0, 'hyIw5iMsWdNrdCnXKGYL', NULL, NULL, NULL, 'XE9jX4ptvX-rqQPDDnRA', NULL, NULL, 'user@rentals.com', NULL)[0m
+Sent mail to user@rentals.com
+
+Date: Tue, 10 Aug 2010 12:41:52 -0400
+From: pechakucha@primedia.com
+To: user@rentals.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@rentals.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=XE9jX4ptvX-rqQPDDnRA">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@bogus.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@apartmentguide.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('7cf370dd409d313c5bfd045b0700f1686ac16955', '2010-08-10 16:44:35', '2010-08-10 16:44:35', NULL, '2010-08-10 16:44:35', NULL, 0, 'J140AJo2tcKAHXfBpSI_', NULL, NULL, NULL, 'EEhZ2VvLS4Uo3P9TFpFH', NULL, NULL, 'user@apartmentguide.com', NULL)[0m
+Sent mail to user@apartmentguide.com
+
+Date: Tue, 10 Aug 2010 12:44:35 -0400
+From: pechakucha@primedia.com
+To: user@apartmentguide.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@apartmentguide.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=EEhZ2VvLS4Uo3P9TFpFH">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@rentals.com') LIMIT 1[0m
+  [4;35;1mUser Create (267.5ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('54d0b854d9e82a75dc83d2a093e9225bd4c55afc', '2010-08-10 16:44:35', '2010-08-10 16:44:35', NULL, '2010-08-10 16:44:35', NULL, 0, 'lDBdd3i7te7QwBD-weD6', NULL, NULL, NULL, 'oZvTdivcER_k2H9Yq5KT', NULL, NULL, 'user@rentals.com', NULL)[0m
+Sent mail to user@rentals.com
+
+Date: Tue, 10 Aug 2010 12:44:35 -0400
+From: pechakucha@primedia.com
+To: user@rentals.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@rentals.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=oZvTdivcER_k2H9Yq5KT">Confirm my account</a></p>
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@bogus.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@primedia.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('d240cbb359b83751dc5301d66058fc47666a6b30', '2010-08-10 16:44:51', '2010-08-10 16:44:51', NULL, '2010-08-10 16:44:51', NULL, 0, 'FaX5BI1nauoq83afRHDb', NULL, NULL, NULL, 'casWciQT0MPlEiTXXI7h', NULL, NULL, 'user@primedia.com', NULL)[0m
+Sent mail to user@primedia.com
+
+Date: Tue, 10 Aug 2010 12:44:51 -0400
+From: pechakucha@primedia.com
+To: user@primedia.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@primedia.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=casWciQT0MPlEiTXXI7h">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@apartmentguide.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('cf3086b09a515fbe7dec3ebd168940bca4c76f84', '2010-08-10 16:44:51', '2010-08-10 16:44:51', NULL, '2010-08-10 16:44:51', NULL, 0, 'pXUI0SWqfUwPRM8Pj8x4', NULL, NULL, NULL, '2bYiIPH-FhUdAqugGujr', NULL, NULL, 'user@apartmentguide.com', NULL)[0m
+Sent mail to user@apartmentguide.com
+
+Date: Tue, 10 Aug 2010 12:44:51 -0400
+From: pechakucha@primedia.com
+To: user@apartmentguide.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@apartmentguide.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=2bYiIPH-FhUdAqugGujr">Confirm my account</a></p>
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@rentals.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('0c9e2030d270e0915c63ae85ac39411681dbf264', '2010-08-10 16:44:51', '2010-08-10 16:44:51', NULL, '2010-08-10 16:44:51', NULL, 0, 'adsEwyM2VlwgAGNrggFC', NULL, NULL, NULL, '4KrYUgc6bdUFbzH00NUT', NULL, NULL, 'user@rentals.com', NULL)[0m
+Sent mail to user@rentals.com
+
+Date: Tue, 10 Aug 2010 12:44:51 -0400
+From: pechakucha@primedia.com
+To: user@rentals.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@rentals.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=4KrYUgc6bdUFbzH00NUT">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@apartmentguide.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('ae438640bb49f83d65aa8045afc6e8c046d69508', '2010-08-10 16:44:51', '2010-08-10 16:44:51', NULL, '2010-08-10 16:44:51', NULL, 0, 'IIA1A8J39-VJYnsFk6dh', NULL, NULL, NULL, '6-g6Iqv0EH58PW0N2x83', NULL, NULL, 'user@apartmentguide.com', NULL)[0m
+Sent mail to user@apartmentguide.com
+
+Date: Tue, 10 Aug 2010 12:44:51 -0400
+From: pechakucha@primedia.com
+To: user@apartmentguide.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@apartmentguide.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=6-g6Iqv0EH58PW0N2x83">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@rentals.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('e65b205205963358cd8a106ffefda93b1763ada9', '2010-08-10 16:44:51', '2010-08-10 16:44:51', NULL, '2010-08-10 16:44:51', NULL, 0, 'jYdbiaOilcWjRJ7Y8geR', NULL, NULL, NULL, 'al6UMVGKWDGmbXX3TmcT', NULL, NULL, 'user@rentals.com', NULL)[0m
+Sent mail to user@rentals.com
+
+Date: Tue, 10 Aug 2010 12:44:51 -0400
+From: pechakucha@primedia.com
+To: user@rentals.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@rentals.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=al6UMVGKWDGmbXX3TmcT">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@bogus.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@primedia.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('a9487e34215068645084948683171188ec703967', '2010-08-10 16:45:43', '2010-08-10 16:45:43', NULL, '2010-08-10 16:45:43', NULL, 0, '99ohc2h0Qbb1-uDG9AEN', NULL, NULL, NULL, 'PlQXPHl2AA7x73cMcD_u', NULL, NULL, 'user@primedia.com', NULL)[0m
+Sent mail to user@primedia.com
+
+Date: Tue, 10 Aug 2010 12:45:43 -0400
+From: pechakucha@primedia.com
+To: user@primedia.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@primedia.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=PlQXPHl2AA7x73cMcD_u">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@apartmentguide.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('5db437e96397539abd6b017a8b53108cdcfa6004', '2010-08-10 16:45:43', '2010-08-10 16:45:43', NULL, '2010-08-10 16:45:43', NULL, 0, 'NMqqwkcCe1DswfJ_16Rr', NULL, NULL, NULL, 'ZFzsLrMN5og-wTABgs8L', NULL, NULL, 'user@apartmentguide.com', NULL)[0m
+Sent mail to user@apartmentguide.com
+
+Date: Tue, 10 Aug 2010 12:45:43 -0400
+From: pechakucha@primedia.com
+To: user@apartmentguide.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@apartmentguide.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=ZFzsLrMN5og-wTABgs8L">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@rentals.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('5c72455e19b3fe39635b483c64624745f7bff842', '2010-08-10 16:45:43', '2010-08-10 16:45:43', NULL, '2010-08-10 16:45:43', NULL, 0, 'ZGWn08UFFWzM_qMTcyCf', NULL, NULL, NULL, 'o5IJ4TkrD0Upctl5Zh9n', NULL, NULL, 'user@rentals.com', NULL)[0m
+Sent mail to user@rentals.com
+
+Date: Tue, 10 Aug 2010 12:45:43 -0400
+From: pechakucha@primedia.com
+To: user@rentals.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@rentals.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=o5IJ4TkrD0Upctl5Zh9n">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@whatever.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@primedia.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('5c9305eb6054d21597f16e652a97ffb5a910741c', '2010-08-10 16:46:50', '2010-08-10 16:46:50', NULL, '2010-08-10 16:46:50', NULL, 0, 'QIVPiM-Pyf_Ie7T5Nxlk', NULL, NULL, NULL, 'iPMr_fyM6P9Ly7z0nLX_', NULL, NULL, 'user@primedia.com', NULL)[0m
+Sent mail to user@primedia.com
+
+Date: Tue, 10 Aug 2010 12:46:50 -0400
+From: pechakucha@primedia.com
+To: user@primedia.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@primedia.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=iPMr_fyM6P9Ly7z0nLX_">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@apartmentguide.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('4c870cdd4697194b5aad5e2a6e258ca4cd8e8937', '2010-08-10 16:46:50', '2010-08-10 16:46:50', NULL, '2010-08-10 16:46:50', NULL, 0, 'Y1EPT1o1mecQh99Pi-zP', NULL, NULL, NULL, 'JeqNJIdoRw4DTJJ223Vg', NULL, NULL, 'user@apartmentguide.com', NULL)[0m
+Sent mail to user@apartmentguide.com
+
+Date: Tue, 10 Aug 2010 12:46:50 -0400
+From: pechakucha@primedia.com
+To: user@apartmentguide.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@apartmentguide.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=JeqNJIdoRw4DTJJ223Vg">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@rentals.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES('4231fa64fc9f91b40b5d7c57c74fab37f19d8ddc', '2010-08-10 16:46:50', '2010-08-10 16:46:50', NULL, '2010-08-10 16:46:50', NULL, 0, 'Zj16KlRwMFXRSnzLK6ak', NULL, NULL, NULL, 'Ayognkt2jxHMvZJuGTL1', NULL, NULL, 'user@rentals.com', NULL)[0m
+Sent mail to user@rentals.com
+
+Date: Tue, 10 Aug 2010 12:46:50 -0400
+From: pechakucha@primedia.com
+To: user@rentals.com
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Welcome user@rentals.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3002/users/confirmation?confirmation_token=Ayognkt2jxHMvZJuGTL1">Confirm my account</a></p>
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@whatever.com') LIMIT 1[0m

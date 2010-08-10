@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation
+  
+  validates_format_of :email, :with => /(primedia.com|rentals.com|apartmentguide.com)/
 end
