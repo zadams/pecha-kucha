@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   end
   
   def list
-    @events = Event.all(:limit => params[:limit])
+    @events = Event.all(:limit => params[:limit], :order => "date DESC")
     render :partial => 'list', :locals => { :events => @events }
   end
 end
