@@ -4,7 +4,9 @@
 - content_for :footer do
   :javascript
     $(document).ready(function(){
-      $("#event_date").datetimepicker();
+      $("#event_date").datetimepicker({
+        timeFormat: 'h:mm', stepMinute: 15
+         });
       $("#event_form").submit(function() {
         $.post('/events/create/', $("#event_form").serialize(), function(result) {
           $('.user_message').text('Your event has been saved.');
