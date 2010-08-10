@@ -1,0 +1,41 @@
+- content_for :head do
+  = javascript_include_tag("jquery-ui-timepicker-addon-0.5.js")
+  = stylesheet_link_tag("jquery-ui-1.8.4.custom.css")
+- content_for :footer do
+  :javascript
+    $(document).ready(function(){
+      $("#event_date").datetimepicker();
+      $("#event_form").submit(function() {
+        $.post('/events/create/', $("#event_form").serialize(), function(result) {
+          $('.user_message').text('Your event has been saved.');
+          $("#event_form")[0].reset();
+          $.get('/events/list/', function(result) {
+            $('#event_list').html(result);
+          });
+        });
+        return false;
+      });
+    });
+%p
+  Welcome to the Admin page of Pecha Kucha
+
+%p
+  Upcoming Pecha Kucha
+#event_list
+  = render :partial => 'events/list', :locals => { :events => @events }
+    
+.user_message
+
+%p
+  Schedule a Pecha Kucha
+- form_for :event, :html => {:id => 'event_form'} do |e|
+  = e.label :description
+  = e.text_field :description
+  %br
+  = e.label :date
+  = e.text_field :date
+  %br
+  = e.label :location
+  = e.text_field :location
+  %br
+  = e.submit
