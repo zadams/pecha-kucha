@@ -4,3 +4,5 @@
       = p.title
     %p
       = link_to(p.slide_deck.url)
+    %p
+      = link_to('Edit', :controller => 'presentations', :action => 'edit', :id => p.id)

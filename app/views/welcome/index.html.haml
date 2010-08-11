@@ -1,2 +1,10 @@
 %p
-  Welcome
+  Welcome to Pecha Kucha!
+  
+%p
+  Recent Presentations
+  
+- @presentations.each do |p|
+  = p.title
+  %br
+  %video{:src => p.video.url, :controls => "controls"}

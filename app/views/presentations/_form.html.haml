@@ -1,0 +1,13 @@
+- form_for :presentation, :html => { :multipart => true } do |p|
+  = p.label :title
+  = p.text_field :title
+  = p.label :description
+  = p.text_field :description
+  = p.label :slide_deck
+  = p.file_field :slide_deck
+  = p.label :event_id
+  = p.select(:event_id, options_from_collection_for_select(@events, :id, :formatted_date))
+  - if include_video
+    = p.label :video
+    = p.file_field :video
+  = p.submit
