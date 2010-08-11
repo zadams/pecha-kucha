@@ -41,3 +41,13 @@
   = e.text_field :location
   %br
   = e.submit
+  
+#all_events
+  All Pecha Kucha Events
+  - @allevents.each do |event|
+    .event
+      %p= "#{event.formatted_date} (#{event.location})"
+      %p
+        = event.description
+      .presentations
+        = render :partial => 'event_presentations', :locals => { :presentations => event.presentations }  

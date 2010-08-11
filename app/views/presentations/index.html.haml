@@ -8,7 +8,7 @@
   = p.text_field :description
   = p.label :slide_deck
   = p.file_field :slide_deck
-  = p.label :event
-  = select_tag(:event, options_from_collection_for_select(@events, :id, :formatted_date))
+  = p.label :event_id
+  = p.select(:event_id, options_from_collection_for_select(@events, :id, :formatted_date))
   = p.submit
    

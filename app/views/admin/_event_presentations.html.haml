@@ -1,0 +1,6 @@
+- presentations.each do |p|
+  .presentation
+    %p
+      = p.title
+    %p
+      = link_to(p.slide_deck.url)

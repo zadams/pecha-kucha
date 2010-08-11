@@ -3,6 +3,7 @@ class AdminController < ApplicationController
   
   def index
     @events = Event.all(:limit => 10)
+    @allevents = Event.all
     @event = Event.new
   end
   

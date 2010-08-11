@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100810193323) do
+ActiveRecord::Schema.define(:version => 20100810201915) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
@@ -49,6 +49,10 @@ ActiveRecord::Schema.define(:version => 20100810193323) do
     t.string   "slide_deck_content_type"
     t.integer  "slide_deck_file_size"
     t.datetime "slide_deck_updated_at"
+    t.string   "video_file_name"
+    t.string   "video_content_type"
+    t.integer  "video_file_size"
+    t.datetime "video_updated_at"
   end
 
   create_table "users", :force => true do |t|

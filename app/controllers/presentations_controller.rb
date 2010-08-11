@@ -7,7 +7,7 @@ class PresentationsController < ApplicationController
   end
   
   def create 
-    if Presentation.create!(params[:presentation])
+    if current_user.presentations.create!(params[:presentation])
       render :partial => 'thank_you'
     else
       render :action => :index
