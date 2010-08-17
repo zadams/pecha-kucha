@@ -1,9 +1,6 @@
 - events.each do |e|
   .event
     %span.when_where
-      = e.date.strftime("%A %m/%d/%Y %I:%M%p")
-      (
-      = e.location
-      )
+      = "#{e.date.strftime("%A %m/%d/%Y %I:%M%p")} (#{e.location})"
     %span.description
       = e.description

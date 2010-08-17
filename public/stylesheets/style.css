@@ -1,3 +1,45 @@
+/* sitewide */
+body{ 
+  background-color:#2C4762;
+  /*background-color:#ff1493;*/
+  font:15px 'Lucida Grande',Verdana,sans-serif;
+}
+h1 { font-size:26pt; }
+h2 { font-size:20pt; }
+.header_text a{ color:#FFF; text-decoration: none;}
+#center_col { width:980px; margin: 0 auto; }
+#main {
+  background-color: #F0F4F8;
+  padding: 1px 0 10px 20px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  margin-top: -10px;
+}
+#user_nav {
+  float: right;
+  margin: -35px 20px 0 0;
+  color: #EEE;
+}
+#user_nav a, #user_nav a:visited { color: #FFF; }
+.flash_info {
+  background-color: #000;
+  margin: -1px 0 0 -20px;
+  -moz-border-radius-topleft: 14px;
+  -moz-border-radius-topright: 14px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  color: #FFF;
+  padding: 1px 0 1px 10px;
+  font-size: 14px;
+}
+.page_heading{
+  position:relative;
+  color:#FFF;
+  width:300px;
+  top:-38px;
+  left:212px;
+}
+
 /* css for timepicker */
 #ui-timepicker-div dl{ text-align: left; }
 #ui-timepicker-div dl dt{ height: 25px; }
@@ -6,3 +48,20 @@
 /* Event list */
 .event .when_where{display:inline-block;}
 .event .description{display:block;padding:4px 0 0 10px;}
+
+/* Upcoming Sessions */
+#upcoming_sessions{
+  float:right;
+}
+#event_list{
+  border-top:1px #C6C6C6 solid;
+  width:320px;
+  font-size:12px;
+}
+.event{margin:16px 0 0 8px;}
+#schedule_session{font-size:12px; margin: 15px 0 0 5px;}
+#schedule_session form{margin:10px 0 0 15px;}
+#schedule_session label{display:block;}
+#schedule_session input, #schedule_session select{margin:0 0 8px 0;}
+.add_session_location{font-size:10px;padding:0 0 0 5px;margin:0;}
+#event-location-form{display:none;}

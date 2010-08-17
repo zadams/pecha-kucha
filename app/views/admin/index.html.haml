@@ -3,6 +3,49 @@
   = stylesheet_link_tag("jquery-ui-1.8.4.custom.css")
 - content_for :footer do
   :javascript
+    $.fn.containsOption = function(value, fn)
+    {
+      var found = false;
+      var v = value;
+      var vT = typeof(v);
+      var fT = typeof(fn);
+      // has to be a string or regular expression (object in IE, function in Firefox)
+      if(vT != "string" && vT != "function" && vT != "object") return fT == "function" ? this: found;
+      this.each(
+        function()
+        {
+          if(this.nodeName.toLowerCase() != "select") return this;
+          // option already found
+          if(found && fT != "function") return false;
+          // get options
+          var o = this.options;
+          // get number of options
+          var oL = o.length;
+          for(var i = 0; i<oL; i++)
+          {
+            if(v.constructor == RegExp)
+            {
+              if (o[i].value.match(v))
+              {
+                found = true;
+                if(fT == "function") fn.call(o[i], i);
+              }
+            }
+            else
+            {
+              if (o[i].value == v)
+              {
+                found = true;
+                if(fT == "function") fn.call(o[i], i);
+              }
+            }
+          }
+        }
+      );
+      return fT == "function" ? this : found;
+    };
+    
+  :javascript
     $(document).ready(function(){
       $("#event_date").datetimepicker({
         timeFormat: 'h:mm', stepMinute: 15
@@ -17,30 +60,86 @@
         });
         return false;
       });
+
+      /* Event location dialog */
+
+      function checkLength(o,min,max) {
+        if ( o.val().length > max || o.val().length < min ) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+      function uniqueOption(option) {
+        if ( $("#event_location").containsOption(option) ){
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+      var location_name = $("#location_name");
+      $("#event-location-form").dialog({
+            autoOpen: false,
+            height: 170,
+            width: 350,
+            modal: true,
+            buttons: {
+              'Add Location': function() {
+                var bValid = true;
+
+                bValid = bValid && checkLength(location_name,1,36);
+
+                if (bValid && uniqueOption(location_name.val())) {
+                  $('#event_location').append('<option value="'+ location_name.val() +'" selected="selected">'+ location_name.val() +'</option>');
+                  $("#new-location-error").text('');
+                  $(this).dialog('close');
+                } else {
+                  $("#new-location-error").text('Please enter a unique location');
+                }
+              },
+              Cancel: function() {
+                $(this).dialog('close');
+                $("#new-location-error").text('');
+              }
+            },
+            close: function() {
+              location_name.val('');
+              $("#new-location-error").text('');
+            }
+      });
+
+      $('#add_location')
+        .click(function() {
+          $('#event-location-form').dialog('open');
+        });
     });
-%p
-  Welcome to the Admin page of Pecha Kucha
 
-%p
-  Upcoming Pecha Kucha
-#event_list
-  = render :partial => 'events/list', :locals => { :events => @events }
-    
-.user_message
 
-%p
-  Schedule a Pecha Kucha
-- form_for :event, :html => {:id => 'event_form'} do |e|
-  = e.label :description
-  = e.text_field :description
-  %br
-  = e.label :date
-  = e.text_field :date
-  %br
-  = e.label :location
-  = e.text_field :location
-  %br
-  = e.submit
+.page_heading
+  | Admin section
+
+#upcoming_sessions
+  %strong= 'Upcoming Sessions'
+  #event_list
+    = render :partial => 'events/list', :locals => { :events => @events }
+
+  #schedule_session
+    %strong= 'Schedule a session'
+    - form_for :event, :html => {:id => 'event_form'} do |e|
+      = e.label :description
+      = e.text_field :description
+      %br
+      = e.label :date
+      = e.text_field :date
+      %br
+      = e.label :location
+      = e.select :location, @event_locations.uniq.sort
+      %p.add_session_location
+        %a{:href => 'javascript:void(0);', :id => 'add_location'}+ Add a location 
+      %br
+      = e.submit "Create Session"
   
 #all_events
   All Pecha Kucha Events
@@ -51,3 +150,10 @@
         = event.description
       .presentations
         = render :partial => 'event_presentations', :locals => { :presentations => event.presentations }  
+
+= content_for :footer do
+  #event-location-form{:title => 'Add Location'}
+    #new-location-error
+    %form
+      %label{:for => 'location_name'} Location
+      %input{:type => "text", :name => 'location_name', :id => 'location_name'}

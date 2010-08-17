@@ -1,10 +1,15 @@
-%p
-  Welcome to Pecha Kucha!
-  
-%p
+%h2
   Recent Presentations
   
+- if @presentations.empty?
+  #no_presentations
+    Sorry, no video presentations are currently available
+
 - @presentations.each do |p|
-  = p.title
-  %br
-  %video{:src => p.video.url, :controls => "controls"}
+  .hp_presentation
+    .title= p.title
+    .video
+      %video{:src => p.video.url, :controls => "controls"}
+
+- unless @presentations.empty?
+  %a "View all Presentations..."
