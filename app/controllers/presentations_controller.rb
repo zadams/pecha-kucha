@@ -3,13 +3,16 @@ class PresentationsController < ApplicationController
   before_filter :authenticate, :action => [:edit, :update]
   
   def index
+  end
+  
+  def new
     @presentation = Presentation.new
     load_events
   end
-  
+
   def create 
     if current_user.presentations.create!(params[:presentation])
-      render :partial => 'thank_you'
+      render :template => 'create'
     else
       render :action => :index
     end

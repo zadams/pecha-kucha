@@ -1,3 +1,10 @@
+#upcoming_sessions
+%strong= 'Upcoming Sessions'
+#event_list
+  = render :partial => 'events/list', :locals => { :events => @events }
+%p.sign_up
+  = link_to("+ Sign up to present", :controller => 'presentations', :action => 'new')
+
 %h2
   Recent Presentations
   

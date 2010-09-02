@@ -6,6 +6,7 @@ body{
 }
 h1 { font-size:26pt; }
 h2 { font-size:20pt; }
+label {display:block;}
 .header_text a{ color:#FFF; text-decoration: none;}
 #center_col { width:980px; margin: 0 auto; }
 #main {
@@ -14,6 +15,7 @@ h2 { font-size:20pt; }
   border-radius: 15px;
   -moz-border-radius: 15px;
   margin-top: -10px;
+  min-height:410px;
 }
 #user_nav {
   float: right;
@@ -48,6 +50,9 @@ h2 { font-size:20pt; }
 /* Event list */
 .event .when_where{display:inline-block;}
 .event .description{display:block;padding:4px 0 0 10px;}
+#all_events .event .description{display:block;padding:0px 0 0 10px;font-style:italic;color:#666;margin-top:-10px;font-size:12px;}
+#all_events .event .presentations{margin-left:10px;}
+#all_events .event .presentations p {font-size:12px;}
 
 /* Upcoming Sessions */
 #upcoming_sessions{
