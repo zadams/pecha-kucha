@@ -1,0 +1,9 @@
+%p
+  My Presentations
+  
+%ul
+  - @presentations.each do |presentation|
+    %li
+      = link_to(presentation.title, presentation_path(presentation))
+      = presentation.event.formatted_date
+      = presentation.event.description

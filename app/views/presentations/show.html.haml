@@ -1,0 +1,24 @@
+- if user_signed_in?
+  = link_to("My Presentations", :controller => 'presentations', :action => 'list')
+  = link_to("Edit this presentation", edit_presentation_path(@presentation))
+%p
+%h2= @presentation.title
+%p
+  = "Event: #{@presentation.event.formatted_date}"
+  = @presentation.event.description
+- if @presentation.video.file?
+  %p
+    %video{:src => @presentation.video.url, :controls => "controls"}
+    
+- if @presentation.swf_file_exists?
+  - content_for :head do
+    = javascript_include_tag('swfobject/swfobject')
+    = javascript_include_tag('flexpaper_flash')
+  - content_for :footer do
+    = javascript_include_tag('flexpaper_viewer')
+  %p
+  = render :partial => 'flash_viewer'
+  #swf_file_name{:style => 'display:none;'}
+    = "http://#{request.host_with_port}#{@presentation.swf_url}"
+    
+  = link_to('Download slide deck', @presentation.slide_deck.url)

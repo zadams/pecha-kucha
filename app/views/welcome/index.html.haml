@@ -5,6 +5,9 @@
 %p.sign_up
   = link_to("+ Sign up to present", :controller => 'presentations', :action => 'new')
 
+- if user_signed_in?
+  = link_to("My Presentations", :controller => 'presentations', :action => 'list')
+
 %h2
   Recent Presentations
   
@@ -20,3 +23,4 @@
 
 - unless @presentations.empty?
   %a "View all Presentations..."
+  
