@@ -18,7 +18,7 @@
 - @presentations.each do |p|
   .hp_presentation
     .title= link_to(p.title, :controller => 'presentations', :action => 'show', :id => p.id)
-    = show_video(p,{:width => '575px'})
+    = show_video(p,{:width => '575px', :height => '323px'})
 
 - unless @presentations.empty?
   %p

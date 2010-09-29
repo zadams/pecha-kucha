@@ -1,2 +1,20 @@
-.video
-  %video{:src => video_url, :controls => "controls", :width => (dimensions[:width] if dimensions)}
+- content_for :head do
+  = stylesheet_link_tag('video-js')
+  = javascript_include_tag('video')
+  
+:javascript
+  VideoJS.setupAllWhenReady();
+  
+.video-js-box
+  %video.video-js{:controls => "", :poster => "http://#{request.host_with_port}/#{presentation.screen_shot_url}", :preload => "", :width => dimensions[:width]}
+    %source{:src => presentation.video.url, :type => "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\""}
+    %source{:src => presentation.ogg_url, :type => "video/ogg; codecs=\"theora, vorbis\""}
+
+    %object.vjs-flash-fallback{:data => "http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf", :type => "application/x-shockwave-flash", :width => dimensions[:width], :height => dimensions[:height]}
+      %param{:name => "movie", :value => "http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf"}/
+      %param{:name => "allowfullscreen", :value => "true"}/
+      %param{:name => "flashvars", 
+             :value => "config={\"playlist\":[\"http://#{request.host_with_port}/#{presentation.screen_shot_url}\", 
+              {\"url\": \"http://#{request.host_with_port}/#{presentation.video.url}\",\"autoPlay\":false,\"autoBuffering\":true}]}"}/
+      / Image Fallback. Typically the same as the poster image.
+      %img{:alt => "Poster Image", :src => "http://#{request.host_with_port}/#{presentation.screen_shot_url}", :title => "No video playback capabilities.", :width => dimensions[:width]}/

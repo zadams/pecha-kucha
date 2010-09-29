@@ -1,14 +1,13 @@
 class PresentationJob < Struct.new(:original_file, :new_file, :type)
   def perform
-    puts "Checking for #{original_file}"
     if File.exists?(original_file)
-      command = 'pdf2swf' if type == 'slide_deck'
-      command = 'ffmpeg2theora' if type == 'video'
+      command = "pdf2swf #{original_file} #{new_file}" if type == 'slide_deck'
+      command = "ffmpeg2theora #{original_file} #{new_file}" if type == 'video'
+      command = "ffmpeg -ss 0 -i #{original_file} -an -vframes 1 #{new_file}" if type == 'screenshot'
     end
     
-    puts "Running command #{command}"
     if command
-      `#{command} #{original_file} #{new_file}`
+      `#{command}`
     else
       raise
     end

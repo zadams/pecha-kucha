@@ -34,8 +34,16 @@ class Presentation < ActiveRecord::Base
     self.video.path.gsub(/.m4v$/,'.ogv') if self.video? && self.video.path
   end
   
+  def screen_shot_path
+    self.video.path.gsub(/.m4v$/,'.png') if self.video? && self.video.path
+  end
+  
   def ogg_url
     self.video.url.gsub(/.m4v/,'.ogv')
+  end
+
+  def screen_shot_url
+    self.video.url.gsub(/.m4v/,'.png')
   end
   
   private
@@ -54,6 +62,7 @@ class Presentation < ActiveRecord::Base
     if self.video_content_type == 'video/x-m4v'
       if self.video_updated_at.to_i - Time.now.to_i < 2.minutes.to_i
         Delayed::Job.enqueue PresentationJob.new(self.video.path, ogg_path, 'video')
+        Delayed::Job.enqueue PresentationJob.new(self.video.path, screen_shot_path, 'screenshot')
       end
     end
   end
