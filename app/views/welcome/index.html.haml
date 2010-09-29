@@ -1,9 +1,9 @@
 #upcoming_sessions
-%strong= 'Upcoming Sessions'
-#event_list
-  = render :partial => 'events/list', :locals => { :events => @events }
-%p.sign_up
-  = link_to("+ Sign up to present", :controller => 'presentations', :action => 'new')
+  %strong= 'Upcoming Sessions'
+  #event_list
+    = render :partial => 'events/list', :locals => { :events => @events }
+  %p.sign_up
+    = link_to("+ Sign up to present", :controller => 'presentations', :action => 'new')
 
 - if user_signed_in?
   = link_to("My Presentations", :controller => 'presentations', :action => 'list')
@@ -17,10 +17,10 @@
 
 - @presentations.each do |p|
   .hp_presentation
-    .title= p.title
-    .video
-      %video{:src => p.video.url, :controls => "controls"}
+    .title= link_to(p.title, :controller => 'presentations', :action => 'show', :id => p.id)
+    = show_video(p,{:width => '575px'})
 
 - unless @presentations.empty?
-  %a "View all Presentations..."
+  %p
+    = link_to("View all Presentations...", :controller => 'presentations', :action => 'index')
   

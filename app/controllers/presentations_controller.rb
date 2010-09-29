@@ -2,6 +2,7 @@ class PresentationsController < ApplicationController
   before_filter :authenticate, :except => [:new]
   
   def index
+    @presentations = Presentation.all
   end
   
   def show
@@ -9,7 +10,7 @@ class PresentationsController < ApplicationController
   end
   
   def list
-    @presentations = current_user.presentations
+    @presentations = current_user.presentations if current_user
   end
   
   def new
@@ -19,7 +20,6 @@ class PresentationsController < ApplicationController
 
   def create 
     if p = current_user.presentations.create!(params[:presentation])
-      Delayed::Job.enqueue p.process_slide_deck if p.slide_deck.application_type == 'application/pdf'
       render :template => 'create'
     else
       render :action => :index
@@ -28,7 +28,6 @@ class PresentationsController < ApplicationController
   
   def edit
     @presentation = Presentation.find_by_id(params[:id])
-    Rails.logger.debug("In edit with #{@presentation.user.inspect}, #{current_user.inspect}, #{admin_signed_in?}")
     unless @presentation.user.eql?(current_user) || admin_signed_in?
       render :action => :index
     end
@@ -38,8 +37,6 @@ class PresentationsController < ApplicationController
   def update
     @presentation = Presentation.find(params[:id])
     if @presentation.update_attributes(params[:presentation])
-      @presentation.reload
-      @presentation.process_slide_deck 
       flash[:notice] = 'Your presentation has been updated'
       redirect_to(@presentation)
     else
