@@ -1,3 +1,17 @@
+= show_side_bar
+
 %p
   Welcome to Presentations
-  
+
+%ul
+  - if @presentations
+    - @presentations.each do |presentation|
+      %li
+        = link_to(presentation.title, presentation_path(presentation))
+        = presentation.event.formatted_date
+        = presentation.event.description
+  - else
+    %p
+      We don't have any presentations yet.
+    %p
+      = link_to("+ Sign up to present", :controller => 'presentations', :action => 'new')

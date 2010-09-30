@@ -18,6 +18,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'presentations/list', :controller => 'presentations', :action => 'list'
   map.resources :presentations
 
+  map.about 'about', :controller => 'welcome', :action => 'about'
   # Sample resource route with options:
   #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
 

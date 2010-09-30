@@ -5,4 +5,9 @@ module ApplicationHelper
       render :partial => 'presentations/video_tag', :locals => {:presentation => p, :dimensions => dimensions}
     end
   end
+
+  def show_side_bar
+    @events = Event.all(:conditions => ['date >= ?', Time.now], :order => "date ASC", :limit => 3)
+    render :partial => 'layouts/side_bar'
+  end
 end

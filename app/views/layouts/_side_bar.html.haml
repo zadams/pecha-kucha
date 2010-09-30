@@ -1,0 +1,15 @@
+#upcoming_sessions
+  %strong= 'Upcoming Sessions'
+  #event_list
+    = render :partial => 'events/list', :locals => { :events => @events }
+  %p.sign_up
+    = link_to("+ Sign up to present", :controller => 'presentations', :action => 'new')
+
+  %ul#side_links
+    %li
+      = link_to("About Pecha Kucha", about_path)
+    %li
+      = link_to("All Presentations", :controller => 'presentations', :action => 'index')
+    - if user_signed_in?
+      %li
+        = link_to("My Presentations", :controller => 'presentations', :action => 'list')
