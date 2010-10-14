@@ -19,7 +19,7 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem "haml", :version => '3.0.15'
+  config.gem "haml", :version => '3.0.21'
   config.gem 'warden', :version => '0.10.7'
   config.gem 'devise', :version => '1.0.8'
   config.gem 'paperclip', :version => '2.3.3'
