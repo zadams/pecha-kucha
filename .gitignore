@@ -1,5 +1,6 @@
 *.log
 *.sqlite3
 *.swp
+*.swo
 log/*
 public/system/*
