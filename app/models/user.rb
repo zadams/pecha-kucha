@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
   validates_format_of :email, :with => /(primedia.com|rentals.com|apartmentguide.com)/
   
   has_many :presentations
+
+  def admin?
+    admin
+  end
 end
