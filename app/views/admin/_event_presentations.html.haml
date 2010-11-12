@@ -1,8 +1,8 @@
 - presentations.each do |p|
   .presentation
     %p
-      = "#{p.title} by #{p}"
+      = "#{p.title} by #{p.user.email}"
     %p
-      = link_to(p.slide_deck.url)
+      = link_to(p.slide_deck.url) if p.slide_deck?
     %p
       = link_to('Edit', :controller => 'presentations', :action => 'edit', :id => p.id)

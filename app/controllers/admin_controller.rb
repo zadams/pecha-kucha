@@ -12,7 +12,6 @@ class AdminController < ApplicationController
   private
 
   def validate_admin
-    require 'ruby-debug';debugger
     redirect_to root_path if current_user.nil? or !current_user.admin?
   end
 
