@@ -15,7 +15,7 @@ class PresentationsController < ApplicationController
 
   def new
     @presentation = Presentation.new
-    load_events
+    @available_events =  load_events
   end
 
   def create
@@ -51,7 +51,12 @@ class PresentationsController < ApplicationController
   end
 
   def load_events
-    @events = Event.all(:conditions => ['date >= ?', Time.now], :order => "date ASC")
+    if params[:event_id] && current_user.admin? && event = Event.find_by_id(params[:event_id])
+      @events = [event]
+    else
+      @events = Event.all(:conditions => ['date >= ?', Time.now], :order => "date ASC")
+    end
+    @events
   end
 
 end

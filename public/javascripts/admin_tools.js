@@ -48,7 +48,7 @@ $(document).ready(function(){
     $.post('/events/create/', $("#event_form").serialize(), function(result) {
       $('.user_message').text('Your event has been saved.');
       $("#event_form")[0].reset();
-      $.get('/events/list/', function(result) {
+      $.get('/events/list/?limit=3', function(result) {
         $('#event_list').html(result);
       });
     });

@@ -31,14 +31,26 @@
 %h2
   All Events
 #all_events
-  - @allevents.each do |event|
-    .event
-      %p= "#{event.formatted_date} (#{event.location})"
-      %p.description
-        = event.description
-      - unless event.presentations.empty?
-        .presentations
-          = render :partial => 'event_presentations', :locals => { :presentations => event.presentations }  
+  #future_events
+    - @allevents[:future].each do |event|
+      .event
+        %p= "#{event.formatted_date} (#{event.location})"
+        %p.description
+          = event.description
+        - unless event.presentations.empty?
+          .presentations
+            = render :partial => 'event_presentations', :locals => { :presentations => event.presentations }
+        = link_to("+ Add presention", :controller => 'presentations', :action => 'new', :event_id => event.id)
+  #past_events
+    - @allevents[:past].each do |event|
+      .event
+        %p= "#{event.formatted_date} (#{event.location})"
+        %p.description
+          = event.description
+        - unless event.presentations.empty?
+          .presentations
+            = render :partial => 'event_presentations', :locals => { :presentations => event.presentations }
+        = link_to("+ Add presention", :controller => 'presentations', :action => 'new', :event_id => event.id)
 
 = content_for :footer do
   #event-location-form{:title => 'Add Location'}

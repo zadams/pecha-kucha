@@ -50,9 +50,12 @@ label {display:block;}
 /* Event list */
 .event .when_where{display:inline-block;}
 .event .description{display:block;padding:4px 0 0 10px;}
+#all_events{width:600px;}
 #all_events .event .description{display:block;padding:0px 0 0 10px;font-style:italic;color:#666;margin-top:-10px;font-size:12px;}
 #all_events .event .presentations{margin-left:10px;}
 #all_events .event .presentations p {font-size:12px;}
+#all_events #future_events{background:transparent url('/images/event_bg.png') -20px -160px no-repeat;padding:5px 0;}
+#all_events #past_events{font-size:0.7em;}
 
 /* Upcoming Sessions */
 #upcoming_sessions{

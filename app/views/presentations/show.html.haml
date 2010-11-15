@@ -8,7 +8,8 @@
   = @presentation.event.description
 
 = show_video(@presentation)
-
+%br
 = show_slide_deck
-
+%br
 = link_to('Download slide deck', @presentation.slide_deck.url) if @presentation.slide_deck?
+%br
