@@ -6,9 +6,9 @@
 %p
   = "Event: #{@presentation.event.formatted_date}"
   = @presentation.event.description
-  
+
 = show_video(@presentation)
-    
+
 = show_slide_deck
-    
-= link_to('Download slide deck', @presentation.slide_deck.url)
+
+= link_to('Download slide deck', @presentation.slide_deck.url) if @presentation.slide_deck?

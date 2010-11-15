@@ -38,7 +38,6 @@
         = event.description
       - unless event.presentations.empty?
         .presentations
-          %p= "Event Presentations"
           = render :partial => 'event_presentations', :locals => { :presentations => event.presentations }  
 
 = content_for :footer do

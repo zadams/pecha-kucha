@@ -56,10 +56,10 @@ class Presentation < ActiveRecord::Base
       end
     end
   end
-  
+
   def process_video
     Rails.logger.debug("process_video called for #{self.video.path}")
-    if self.video_content_type == 'video/x-m4v'
+    if self.video_content_type == 'video/x-m4v' || self.video_content_type == 'video/mp4'
       if self.video_updated_at.to_i - Time.now.to_i < 2.minutes.to_i
         Delayed::Job.enqueue PresentationJob.new(self.video.path, ogg_path, 'video')
         Delayed::Job.enqueue PresentationJob.new(self.video.path, screen_shot_path, 'screenshot')
