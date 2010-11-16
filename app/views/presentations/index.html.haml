@@ -8,8 +8,9 @@
     - @presentations.each do |presentation|
       %li
         = link_to(presentation.title, presentation_path(presentation))
-        = presentation.event.formatted_date
-        = presentation.event.description
+        - if presentation.event
+          = presentation.event.formatted_date
+          = presentation.event.description
   - else
     %p
       We don't have any presentations yet.

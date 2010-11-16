@@ -4,8 +4,9 @@
 %p
 %h2= @presentation.title
 %p
-  = "Event: #{@presentation.event.formatted_date}"
-  = @presentation.event.description
+  - if @presentation.event
+    = "Event: #{@presentation.event.formatted_date}"
+    = @presentation.event.description
 
 = show_video(@presentation)
 %br
