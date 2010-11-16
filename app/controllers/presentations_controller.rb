@@ -31,7 +31,7 @@ class PresentationsController < ApplicationController
     unless @presentation.user.eql?(current_user) || admin_signed_in?
       render :action => :index
     end
-    load_events
+    @available_events = load_events('all')
   end
 
   def update
@@ -50,9 +50,11 @@ class PresentationsController < ApplicationController
     admin_signed_in? || user_signed_in?
   end
 
-  def load_events
+  def load_events(type = nil)
     if params[:event_id] && current_user.admin? && event = Event.find_by_id(params[:event_id])
       @events = [event]
+    elsif type == 'all'
+      @events = Event.all(:order => "date ASC")
     else
       @events = Event.all(:conditions => ['date >= ?', Time.now], :order => "date ASC")
     end
