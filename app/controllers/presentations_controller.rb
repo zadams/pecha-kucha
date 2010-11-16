@@ -19,8 +19,9 @@ class PresentationsController < ApplicationController
   end
 
   def create
-    if p = current_user.presentations.create!(params[:presentation])
-      render :template => 'create'
+    if params[:user_id] && u = User.find_by_id(params[:presentation][:user_id])
+      u.presentations.create!(params[:presentation])
+    elsif p = current_user.presentations.create!(params[:presentation])
     else
       render :action => :index
     end

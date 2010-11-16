@@ -1,6 +1,7 @@
 - form_for @presentation, :html => { :multipart => true } do |p|
   = p.label :event_id
   = p.select(:event_id, options_from_collection_for_select(@available_events, :id, :formatted_date))
+  = p.select(:user_id, options_from_collection_for_select(all_users, :id, :email)) if current_user.admin?
   = p.label :title
   = p.text_field :title
   = p.label :description
